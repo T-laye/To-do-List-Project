@@ -13,34 +13,36 @@
     />
 
     <link rel="stylesheet" href="./css/style.css" />
-    <title>To Do</title>
+    <title>Task List</title>
   </head>
   <body>
     <header>
       <h1>To Do List</h1>
     </header>
     <main>
-      <section id="todo-section">
-        <h2>To do</h2>
-        <form class="add-task-form">
-          <input id="new-task" type="text" placeholder="Enter task here" />
-          <input
-            type="submit"
-            class="submit-btn"
-            id="add-task"
-            value="Add Task"
-          />
+      <section id="To-do">
+        <h2>To Do</h2>
+        <form id="new-task">
+          <input type="text" id="task-input" placeholder="What's your plan?" />
+          <input class="submit" type="submit" value="+" />
         </form>
-        <div class="tasks">1</div>
-      </section>
-      <section id="progress-section">
-        <h2>In Progress</h2>
-        <div class="tasks">2</div>
-      </section>
-      <section id="done-section">
-        <h2>Done</h2>
-        <div class="tasks">3</div>
+        <div id="task-list">
+          <h3>Task List</h3>
+          <div id="task">
+            <!-- <div class="task">
+              <div class="added">
+                <input type="text" class="text" value="Added tasks" readonly />
+                <input type="submit" value="&rarr;" class="send" />
+              </div>
+              <div class="action">
+                <button class="delete-btn">Delete</button>
+                <button class="edit-btn">Edit</button>
+              </div>
+            </div> -->
+          </div>
+        </div>
       </section>
     </main>
+    <script src="./script.js"></script>
   </body>
 </html>
