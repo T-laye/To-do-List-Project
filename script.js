@@ -41,10 +41,26 @@ window.addEventListener("load", () => {
     const task_actions_el = document.createElement("div");
     task_actions_el.classList.add("action");
 
-    const task_edit_el = document.createElement("button");
-    task_edit_el.classList.add("btn");
+    task_el.appendChild(task_actions_el);
 
-    list_el.appendChild(task_actions_el);
+    // const task_edit_el = document.createElement("button");
+    // task_edit_el.classList.add("delete-btn");
+    // task_edit_el.innerText = "Edit";
+
+    // task_actions_el.appendChild(task_edit_el);
+
+    const task_edit_el = document.createElement("button");
+    task_edit_el.classList.add("edit-btn");
+    task_edit_el.innerText = "Edit";
+
+    task_actions_el.appendChild(task_edit_el);
+
+    const task_delete_el = document.createElement("button");
+    task_delete_el.classList.add("edit-btn");
+    task_delete_el.innerText = "Delete";
+
+    task_actions_el.appendChild(task_edit_el);
+    task_actions_el.appendChild(task_delete_el);
 
     list_el.appendChild(task_el);
   });
