@@ -14,6 +14,12 @@ body {
   padding: 2rem;
 }
 
+main {
+  display: flex;
+  /* gap: 2rem; */
+  justify-content: space-evenly;
+}
+
 h1 {
   text-align: center;
   color: #bbb;
@@ -28,6 +34,14 @@ h2 {
   font-size: 3rem;
   color: #ddd;
   margin-bottom: 1.2rem;
+}
+
+#progress {
+  /* padding: 0 1rem; */
+}
+
+#progress h2 {
+  background-color: darkgoldenrod;
 }
 
 section {

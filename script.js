@@ -1,4 +1,6 @@
 // "use strict";
+// window.localStorage.setItem()
+
 window.addEventListener("load", () => {
   const form = document.querySelector("#new-task");
   let input = document.querySelector("#task-input");
@@ -64,6 +66,34 @@ window.addEventListener("load", () => {
 
     list_el.appendChild(task_el);
 
-    input.value = " ";
+    input.value = "";
+
+    task_edit_el.addEventListener("click", () => {
+      if (task_edit_el.innerText.toLowerCase() == "edit") {
+        task_input_el.removeAttribute("readonly");
+        task_input_el.focus();
+        task_edit_el.innerText = "Save";
+      } else {
+        task_input_el.setAttribute("readonly", "readonly");
+        task_edit_el.innerText = "Edit";
+      }
+    });
+
+    task_delete_el.addEventListener("click", () => {
+      list_el.removeChild(task_el);
+    });
+
+    const progress_section = document.querySelector("#progress");
+
+    task_send_el.addEventListener("click", () => {
+      console.log("Send");
+      const progress_el = document.createElement("input");
+      progress_el.classList.add("text");
+      progress_el.type = "text";
+      progress_el.value = task;
+      progress_el.setAttribute("readonly", "readonly");
+
+      progress_section.appendChild(progress_el);
+    });
   });
 });
