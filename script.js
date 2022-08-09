@@ -4,9 +4,10 @@
 window.addEventListener("load", () => {
   const form = document.querySelector("#new-task");
   let input = document.querySelector("#task-input");
-  const list_el = document.querySelector("#task");
+  let list_el = document.querySelector("#task");
   const progress_section = document.querySelector("#progress");
   const done_section = document.querySelector("#done");
+  const clear = document.querySelector(".clear-btn");
 
   // console.log(done_section.innerText);
 
@@ -87,6 +88,9 @@ window.addEventListener("load", () => {
       list_el.removeChild(task_el);
     });
 
+    ///////////////////////////
+    ///////Doing session
+
     task_send_el.addEventListener("click", () => {
       // console.log("Send");
       const progress_el = document.createElement("input");
@@ -102,6 +106,12 @@ window.addEventListener("load", () => {
       progress_delete_el.innerText = "Delete";
 
       progress_section.appendChild(progress_delete_el);
+
+      // const clear_el = document.createElement("button");
+      // clear_el.classList.add("clear-btn");
+      // clear_el.innerText = "Clear List";
+
+      // progress_section.appendChild(clear_el);
 
       progress_delete_el.addEventListener("click", () => {
         progress_section.removeChild(progress_el);
@@ -129,6 +139,10 @@ window.addEventListener("load", () => {
         progress_section.removeChild(progress_delete_el);
         progress_section.removeChild(push_el);
       });
+    });
+
+    clear.addEventListener("click", () => {
+      list_el.removeChild(task_el);
     });
   });
 });

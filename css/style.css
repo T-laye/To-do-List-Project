@@ -44,6 +44,7 @@ section {
   padding-bottom: 1rem;
   border-radius: 10px;
   overflow: hidden;
+  /* transition: all 0.1s; */
 }
 
 #new-task {
@@ -130,7 +131,9 @@ h3 {
   border-radius: 4px;
   padding: 2px 4px;
   /* background-color: #eee; */
+  cursor: pointer;
   background-color: #aaa;
+  transition: all 0.1s;
 }
 
 .action {
@@ -139,13 +142,23 @@ h3 {
 }
 
 .delete-btn,
-.edit-btn {
+.edit-btn,
+.clear-btn {
   padding: 2px 4px;
   background-color: #aaa;
   font-weight: 600;
   font-size: 1.2rem;
   border: none;
   border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+.delete-btn:hover,
+.edit-btn:hover,
+.clear-btn:hover,
+.send:hover {
+  background-color: #ddd;
 }
 
 /***********************/
@@ -165,6 +178,12 @@ h3 {
   border-radius: 3px;
   margin-bottom: 1.2rem;
   margin-left: 5px;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+.delete-progress-btn:hover {
+  background-color: #ddd;
 }
 
 .push {
@@ -177,6 +196,12 @@ h3 {
   margin-left: 1rem;
   font-weight: 500;
   background-color: #aaa;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+.push:hover {
+  background-color: #ddd;
 }
 
 /***************************/
@@ -184,4 +209,20 @@ h3 {
 
 #done h2 {
   background-color: darkgreen;
+}
+
+/*************************/
+/*****CLEAR BUTTON*******/
+.clear {
+  /* background-color: pink; */
+  display: flex;
+  justify-content: flex-end;
+  padding: 1px 5px;
+  align-self: flex-end;
+}
+
+.clear-btn {
+  position: relative;
+  bottom: 0px;
+  /* left: 100px; */
 }
