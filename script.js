@@ -1,7 +1,7 @@
 // "use strict";
 window.addEventListener("load", () => {
   const form = document.querySelector("#new-task");
-  const input = document.querySelector("#task-input");
+  let input = document.querySelector("#task-input");
   const list_el = document.querySelector("#task");
 
   form.addEventListener("submit", (e) => {
@@ -63,5 +63,7 @@ window.addEventListener("load", () => {
     task_actions_el.appendChild(task_delete_el);
 
     list_el.appendChild(task_el);
+
+    input.value = " ";
   });
 });
