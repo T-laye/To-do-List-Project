@@ -36,10 +36,6 @@ h2 {
   margin-bottom: 1.2rem;
 }
 
-#progress h2 {
-  background-color: darkgoldenrod;
-}
-
 section {
   background-color: #111;
   width: 30%;
@@ -118,7 +114,7 @@ h3 {
   color: #fff;
   font-weight: 500;
   letter-spacing: 1px;
-  margin-bottom: 6px;
+  margin: 0 6px 6px 6px;
 }
 
 .added {
@@ -152,6 +148,13 @@ h3 {
   border-radius: 3px;
 }
 
+/***********************/
+/****Progress**********/
+
+#progress h2 {
+  background-color: darkgoldenrod;
+}
+
 .delete-progress-btn {
   padding: 2px 4px;
   background-color: #aaa;
@@ -161,4 +164,24 @@ h3 {
   border: none;
   border-radius: 3px;
   margin-bottom: 1.2rem;
+  margin-left: 5px;
+}
+
+.push {
+  /* position: absolute;
+  right: 5px;
+  top: 11px; */
+  border: none;
+  border-radius: 4px;
+  padding: 2px 4px;
+  margin-left: 1rem;
+  font-weight: 500;
+  background-color: #aaa;
+}
+
+/***************************/
+/******Done****************/
+
+#done h2 {
+  background-color: darkgreen;
 }

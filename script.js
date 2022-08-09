@@ -5,6 +5,10 @@ window.addEventListener("load", () => {
   const form = document.querySelector("#new-task");
   let input = document.querySelector("#task-input");
   const list_el = document.querySelector("#task");
+  const progress_section = document.querySelector("#progress");
+  const done_section = document.querySelector("#done");
+
+  // console.log(done_section.innerText);
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -83,10 +87,8 @@ window.addEventListener("load", () => {
       list_el.removeChild(task_el);
     });
 
-    const progress_section = document.querySelector("#progress");
-
     task_send_el.addEventListener("click", () => {
-      console.log("Send");
+      // console.log("Send");
       const progress_el = document.createElement("input");
       progress_el.classList.add("text");
       progress_el.type = "text";
@@ -104,6 +106,28 @@ window.addEventListener("load", () => {
       progress_delete_el.addEventListener("click", () => {
         progress_section.removeChild(progress_el);
         progress_section.removeChild(progress_delete_el);
+        progress_section.removeChild(push_el);
+      });
+
+      const push_el = document.createElement("input");
+      push_el.classList.add("push");
+      push_el.type = "submit";
+      push_el.value = "Push";
+
+      progress_section.appendChild(push_el);
+
+      push_el.addEventListener("click", () => {
+        const done_el = document.createElement("input");
+        done_el.classList.add("text");
+        done_el.type = "text";
+        done_el.value = task;
+        done_el.setAttribute("readonly", "readonly");
+
+        done_section.appendChild(done_el);
+
+        progress_section.removeChild(progress_el);
+        progress_section.removeChild(progress_delete_el);
+        progress_section.removeChild(push_el);
       });
     });
   });
