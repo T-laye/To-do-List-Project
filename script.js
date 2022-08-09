@@ -94,6 +94,17 @@ window.addEventListener("load", () => {
       progress_el.setAttribute("readonly", "readonly");
 
       progress_section.appendChild(progress_el);
+
+      const progress_delete_el = document.createElement("button");
+      progress_delete_el.classList.add("delete-progress-btn");
+      progress_delete_el.innerText = "Delete";
+
+      progress_section.appendChild(progress_delete_el);
+
+      progress_delete_el.addEventListener("click", () => {
+        progress_section.removeChild(progress_el);
+        progress_section.removeChild(progress_delete_el);
+      });
     });
   });
 });

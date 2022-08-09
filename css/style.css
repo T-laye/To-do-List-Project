@@ -36,10 +36,6 @@ h2 {
   margin-bottom: 1.2rem;
 }
 
-#progress {
-  /* padding: 0 1rem; */
-}
-
 #progress h2 {
   background-color: darkgoldenrod;
 }
@@ -154,4 +150,15 @@ h3 {
   font-size: 1.2rem;
   border: none;
   border-radius: 3px;
+}
+
+.delete-progress-btn {
+  padding: 2px 4px;
+  background-color: #aaa;
+  /* background-color: pink; */
+  font-weight: 600;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 3px;
+  margin-bottom: 1.2rem;
 }
