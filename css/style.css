@@ -221,8 +221,13 @@ h3 {
   align-self: flex-end;
 }
 
-.clear-btn {
+.clear-btn,
+.clear-btn-2,
+.clear-btn-3 {
   position: relative;
   bottom: 0px;
+  background-color: #aaa;
+  padding: 2px 4px;
+  cursor: pointer;
   /* left: 100px; */
 }

@@ -2,14 +2,13 @@
 // window.localStorage.setItem()
 
 window.addEventListener("load", () => {
+  //Parameters
   const form = document.querySelector("#new-task");
   let input = document.querySelector("#task-input");
   let list_el = document.querySelector("#task");
   const progress_section = document.querySelector("#progress");
   const done_section = document.querySelector("#done");
   const clear = document.querySelector(".clear-btn");
-
-  // console.log(done_section.innerText);
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -88,6 +87,11 @@ window.addEventListener("load", () => {
       list_el.removeChild(task_el);
     });
 
+    const clear = document.querySelector(".clear-btn");
+    clear.addEventListener("click", () => {
+      list_el.removeChild(task_el);
+    });
+
     ///////////////////////////
     ///////Doing session
 
@@ -107,17 +111,22 @@ window.addEventListener("load", () => {
 
       progress_section.appendChild(progress_delete_el);
 
-      // const clear_el = document.createElement("button");
-      // clear_el.classList.add("clear-btn");
-      // clear_el.innerText = "Clear List";
-
-      // progress_section.appendChild(clear_el);
+      list_el.removeChild(task_el);
 
       progress_delete_el.addEventListener("click", () => {
         progress_section.removeChild(progress_el);
         progress_section.removeChild(progress_delete_el);
         progress_section.removeChild(push_el);
       });
+
+      const clearDoingBtn = document.querySelector(".clear-btn-2");
+      clearDoingBtn.addEventListener("click", () => {
+        progress_section.removeChild(progress_el);
+        progress_section.removeChild(progress_delete_el);
+        progress_section.removeChild(push_el);
+      });
+
+      // progress_section.appendChild(clear_con);
 
       const push_el = document.createElement("input");
       push_el.classList.add("push");
@@ -138,11 +147,12 @@ window.addEventListener("load", () => {
         progress_section.removeChild(progress_el);
         progress_section.removeChild(progress_delete_el);
         progress_section.removeChild(push_el);
-      });
-    });
 
-    clear.addEventListener("click", () => {
-      list_el.removeChild(task_el);
+        const clearDoneBtn = document.querySelector(".clear-btn-3");
+        clearDoneBtn.addEventListener("click", () => {
+          done_section.removeChild(done_el);
+        });
+      });
     });
   });
 });
