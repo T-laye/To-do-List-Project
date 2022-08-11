@@ -231,3 +231,25 @@ h3 {
   cursor: pointer;
   /* left: 100px; */
 }
+
+@media screen and (max-width: 63em) {
+  main {
+    display: flex;
+    /* gap: 2rem; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 25px;
+  }
+
+  section {
+    background-color: #111;
+    width: 90%;
+    min-height: 80vh;
+    height: auto;
+    padding-bottom: 1rem;
+    border-radius: 10px;
+    overflow: hidden;
+    /* transition: all 0.1s; */
+  }
+} ;
