@@ -2,6 +2,12 @@
 
 window.addEventListener("load", () => {
   //Parameters
+  const form = document.querySelector("#new-task");
+  let input = document.querySelector("#task-input");
+  let list_el = document.querySelector("#task");
+  const progress_section = document.querySelector("#progress");
+  const done_section = document.querySelector("#done");
+  const clear = document.querySelector(".clear-btn");
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -13,7 +19,7 @@ window.addEventListener("load", () => {
       taskList = localItems;
     }
 
-    taskList.push(input.value);
+    taskList.push(input.value, list_el);
 
     localStorage.setItem("localItem", JSON.stringify(taskList));
 
