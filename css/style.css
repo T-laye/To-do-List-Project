@@ -232,15 +232,6 @@ h3 {
   /* left: 100px; */
 }
 
-/* @media screen and (max-width: 64rem) {
-  html {
-    font-size: 50%;
-  }
-  .testimonial {
-    grid-template-columns: repeat(2, 1fr);
-  }
-} */
-
 @media screen and (max-width: 63em) {
   main {
     display: flex;
@@ -248,7 +239,7 @@ h3 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    row-gap: 20px;
+    row-gap: 25px;
   }
 
   section {
