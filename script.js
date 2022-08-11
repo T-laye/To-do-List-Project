@@ -1,17 +1,21 @@
 // "use strict";
-// window.localStorage.setItem()
 
 window.addEventListener("load", () => {
   //Parameters
-  const form = document.querySelector("#new-task");
-  let input = document.querySelector("#task-input");
-  let list_el = document.querySelector("#task");
-  const progress_section = document.querySelector("#progress");
-  const done_section = document.querySelector("#done");
-  const clear = document.querySelector(".clear-btn");
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
+
+    let localItems = JSON.parse(localStorage.getItem("localItem"));
+    if (localItems === null) {
+      taskList = [];
+    } else {
+      taskList = localItems;
+    }
+
+    taskList.push(input.value);
+
+    localStorage.setItem("localItem", JSON.stringify(taskList));
 
     const task = input.value;
 
@@ -54,6 +58,8 @@ window.addEventListener("load", () => {
     // task_edit_el.innerText = "Edit";
 
     // task_actions_el.appendChild(task_edit_el);
+
+    taskList.push(task_input_el.value);
 
     const task_edit_el = document.createElement("button");
     task_edit_el.classList.add("edit-btn");
@@ -156,3 +162,7 @@ window.addEventListener("load", () => {
     });
   });
 });
+
+// window.localStorage.setItem("store", JSON.stringify(store));
+
+// console.log(window.localStorage.getItem("store"));
