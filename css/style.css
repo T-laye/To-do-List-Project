@@ -231,11 +231,11 @@ h3 {
   cursor: pointer;
   /* left: 100px; */
 }
-
+/*
 @media screen and (max-width: 63em) {
+  
   main {
     display: flex;
-    /* gap: 2rem; */
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -250,6 +250,7 @@ h3 {
     padding-bottom: 1rem;
     border-radius: 10px;
     overflow: hidden;
-    /* transition: all 0.1s; */
   }
 } ;
+
+*/
