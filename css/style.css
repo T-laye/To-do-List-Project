@@ -247,11 +247,10 @@ h3 {
 
   section {
     background-color: #111;
-    /* min-height: 80vh;
-    height: auto;
     padding-bottom: 1rem;
-    border-radius: 10px;*/
+    border-radius: 10px;
     overflow-x: hidden;
+    width: 30%;
     /* transition: all 0.1s; */
   }
 } ;
